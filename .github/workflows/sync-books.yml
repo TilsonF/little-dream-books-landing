@@ -1,0 +1,93 @@
+name: 📚 Sync Books from Amazon
+
+on:
+  # Run every day at 8:00 AM UTC (3 AM Mexico City)
+  schedule:
+    - cron: "0 8 * * *"
+
+  # Also run on every push to main (so adding a new ASIN triggers a rebuild)
+  push:
+    branches: [main]
+    paths:
+      - "src/data/asins.json"  # Only trigger if the author edited the ASIN list
+
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+jobs:
+  sync-and-deploy:
+    name: Fetch book data & deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit books.json
+      pages: write      # needed to deploy to GitHub Pages
+      id-token: write   # needed for Pages OIDC auth
+
+    steps:
+      # ── 1. Checkout ─────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Setup Node ────────────────────────────────────────────────────────
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+
+      # ── 3. Install dependencies ──────────────────────────────────────────────
+      - name: Install dependencies
+        run: npm ci
+
+      # ── 4. Fetch book data from Amazon ───────────────────────────────────────
+      - name: Fetch book data from Amazon
+        id: fetch
+        run: node scripts/fetch-books.mjs
+        continue-on-error: true   # Don't fail the whole workflow if Amazon blocks us
+        # The script keeps old data if fetching fails, so the site still builds
+
+      - name: Report fetch result
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "⚠️ Amazon fetch failed (may be temporary block or rate limit)"
+          echo "   The site will rebuild using the previously cached books.json"
+
+      # ── 5. Commit updated books.json if it changed ───────────────────────────
+      - name: Commit updated books.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Only commit if books.json actually changed
+          if git diff --quiet src/data/books.json; then
+            echo "No changes to books.json — skipping commit"
+          else
+            git add src/data/books.json
+            git commit -m "chore: sync book data from Amazon [skip ci]"
+            git push
+            echo "✅ books.json committed and pushed"
+          fi
+
+      # ── 6. Build Astro site ──────────────────────────────────────────────────
+      - name: Build Astro site
+        run: npm run build
+
+      # ── 7. Deploy to GitHub Pages ─────────────────────────────────────────────
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Deployment summary
+        run: |
+          echo "🚀 Site deployed!"
+          echo "   URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "   Books fetched: $(node -e "const d=require('./src/data/books.json'); console.log(d.fetchStats?.successCount + '/' + d.fetchStats?.total)")"
+          echo "   Last updated: $(node -e "const d=require('./src/data/books.json'); console.log(d.lastUpdated)")"
