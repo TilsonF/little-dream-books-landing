@@ -1,0 +1,26 @@
+{
+  "authorId": "B0H2QJHHD5",
+  "authorName": "Tilson Fernandez",
+  "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
+  "books": [
+    {
+      "id": "isabella-garden-of-stars",
+      "tag": "Disponible ahora",
+      "tagColor": "chip-mint",
+      "isNew": true,
+      "primaryAsin": "B0H2H7NFJQ",
+      "editions": {
+        "en": {
+          "paperback": "B0H2H7NFJQ",
+          "ebook": "B0GX2WKNWN",
+          "hardcover": ""
+        },
+        "es": {
+          "paperback": "B0H2FPQHPF",
+          "ebook": "B0H3J4974D",
+          "hardcover": ""
+        }
+      }
+    }
+  ]
+}

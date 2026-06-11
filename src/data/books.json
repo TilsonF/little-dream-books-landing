@@ -1,0 +1,96 @@
+{
+  "authorId": "B0H2QJHHD5",
+  "authorName": "Tilson Fernandez",
+  "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
+  "lastUpdated": "2026-06-11T03:31:29.736Z",
+  "fetchStats": {
+    "successCount": 4,
+    "failCount": 0,
+    "total": 4
+  },
+  "books": [
+    {
+      "id": "isabella-garden-of-stars",
+      "tag": "Disponible ahora",
+      "tagColor": "chip-mint",
+      "isNew": true,
+      "title": "Isabella and the Garden of Stars: A Magical Bedtime Story About Overcoming Fear of the Dark",
+      "coverUrl": "https://m.media-amazon.com/images/I/714hoImkkkL._SL500_.jpg",
+      "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
+      "stars": "5.0",
+      "reviews": "1",
+      "editions": {
+        "en": {
+          "paperback": {
+            "asin": "B0H2H7NFJQ",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ"
+          },
+          "ebook": {
+            "asin": "B0GX2WKNWN",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0GX2WKNWN"
+          }
+        },
+        "es": {
+          "paperback": {
+            "asin": "B0H2FPQHPF",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H2FPQHPF"
+          },
+          "ebook": {
+            "asin": "B0H3J4974D",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H3J4974D"
+          }
+        }
+      },
+      "_raw": {
+        "B0H2H7NFJQ": {
+          "asin": "B0H2H7NFJQ",
+          "title": "Isabella and the Garden of Stars: A Magical Bedtime Story About Overcoming Fear of the Dark",
+          "coverUrl": "https://m.media-amazon.com/images/I/714hoImkkkL._SL500_.jpg",
+          "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
+          "price": "",
+          "stars": "5.0",
+          "reviews": "1",
+          "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ",
+          "fetchedAt": "2026-06-11T03:31:13.082Z"
+        },
+        "B0GX2WKNWN": {
+          "asin": "B0GX2WKNWN",
+          "title": "Isabella and the Garden of Stars: A Magical Bedtime Story About Overcoming Fear of the Dark",
+          "coverUrl": "https://m.media-amazon.com/images/I/71ZgeSnUiYL._SL500_.jpg",
+          "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
+          "price": "",
+          "stars": "5.0",
+          "reviews": "1",
+          "amazonUrl": "https://www.amazon.com/dp/B0GX2WKNWN",
+          "fetchedAt": "2026-06-11T03:31:17.824Z"
+        },
+        "B0H2FPQHPF": {
+          "asin": "B0H2FPQHPF",
+          "title": "Isabella y el jardín de las estrellas: Un cuento mágico para vencer el miedo a la oscuridad (Spanish Edition)",
+          "coverUrl": "https://m.media-amazon.com/images/I/71UvxPmVnvL._SL500_.jpg",
+          "description": "¿Y si la oscuridad no fuera algo que temer, sino el lugar más mágico al que tu hijo ha ido?Isabella no puede dormir. Cada noche, las sombras de su cuarto se sienten demasiado grandes, demasiado silenciosas, demasiado desconocidas. Pero una noche, algo extraordinario ocurre: su jardín comienza a brillar.Las flores florecen bajo la luna. Las luciérnagas danzan entre las hojas. E Isabella descubre qu",
+          "price": "",
+          "stars": "",
+          "reviews": "",
+          "amazonUrl": "https://www.amazon.com/dp/B0H2FPQHPF",
+          "fetchedAt": "2026-06-11T03:31:24.958Z"
+        },
+        "B0H3J4974D": {
+          "asin": "B0H3J4974D",
+          "title": "Isabella y el jardín de las estrellas: Un cuento mágico para vencer el miedo a la oscuridad (Spanish Edition)",
+          "coverUrl": "https://m.media-amazon.com/images/I/71II1Jmh7eL._SL500_.jpg",
+          "description": "¿Y si la oscuridad no fuera algo que temer, sino el lugar más mágico al que tu hijo ha ido?Isabella no puede dormir. Cada noche, las sombras de su cuarto se sienten demasiado grandes, demasiado silenciosas, demasiado desconocidas. Pero una noche, algo extraordinario ocurre: su jardín comienza a brillar.Las flores florecen bajo la luna. Las luciérnagas danzan entre las hojas. E Isabella descubre qu",
+          "price": "",
+          "stars": "",
+          "reviews": "",
+          "amazonUrl": "https://www.amazon.com/dp/B0H3J4974D",
+          "fetchedAt": "2026-06-11T03:31:29.736Z"
+        }
+      }
+    }
+  ]
+}

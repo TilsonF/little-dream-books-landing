@@ -1,0 +1,300 @@
+---
+---
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <!-- Logo -->
+    <a href="/" class="logo" id="logo-link">
+      <span class="logo-icon">📖</span>
+      <span class="logo-text">Little Dream Books</span>
+    </a>
+
+    <!-- Nav links -->
+    <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
+      <a href="#books" class="nav-link">Our Books</a>
+      <a href="#benefits" class="nav-link">Benefits</a>
+      <a href="#educational" class="nav-link">FAQ</a>
+    </nav>
+
+    <!-- Right side -->
+    <div class="nav-right">
+      <!-- Language toggle -->
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+        <span class="lang-cloud"></span>
+        <span class="lang-label" id="lang-label">EN/ES</span>
+      </button>
+
+      <!-- Amazon CTA -->
+      <a
+        href="https://amazon.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary nav-cta"
+        id="nav-cta-btn"
+      >
+        Shop on Amazon
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#books" class="mobile-link">Our Books</a>
+    <a href="#benefits" class="mobile-link">Benefits</a>
+    <a href="#educational" class="mobile-link">Educational Value</a>
+    <a href="https://amazon.com" target="_blank" class="btn-primary mobile-cta">Shop on Amazon</a>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(252, 248, 253, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(200, 197, 208, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .navbar.scrolled {
+    box-shadow: 0 4px 32px rgba(46, 42, 91, 0.08);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    height: 68px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .logo-icon {
+    font-size: 22px;
+    filter: drop-shadow(0 2px 4px rgba(46, 42, 91, 0.2));
+  }
+
+  .logo-text {
+    font-family: var(--font-brand);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-left: auto;
+  }
+
+  .nav-link {
+    font-family: var(--font-brand);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--secondary);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--sky-soft);
+    color: var(--primary);
+    font-family: var(--font-brand);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: var(--radius-full);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .lang-toggle:hover {
+    transform: scale(1.05);
+    background: var(--sky);
+    color: white;
+  }
+
+  .lang-cloud {
+    font-size: 14px;
+  }
+
+  .lang-cloud::before {
+    content: "☁️";
+  }
+
+  .nav-cta {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 2.5px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px var(--gutter) 20px;
+    background: var(--surface-container-low);
+    border-top: 1px solid var(--outline-variant);
+  }
+
+  .mobile-link {
+    font-family: var(--font-brand);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--on-surface);
+    padding: 10px 4px;
+    border-bottom: 1px solid var(--outline-variant);
+    transition: color 0.2s;
+  }
+
+  .mobile-link:hover {
+    color: var(--secondary);
+  }
+
+  .mobile-cta {
+    margin-top: 12px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .nav-right {
+      margin-left: auto;
+    }
+  }
+</style>
+
+<script>
+  // Scroll shadow
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      navbar?.classList.add("scrolled");
+    } else {
+      navbar?.classList.remove("scrolled");
+    }
+  });
+
+  // Hamburger toggle
+  const hamburger = document.getElementById("hamburger-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  hamburger?.addEventListener("click", () => {
+    const isOpen = mobileMenu?.classList.toggle("open");
+    hamburger.classList.toggle("open");
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+    mobileMenu?.setAttribute("aria-hidden", String(!isOpen));
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll(".mobile-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.remove("open");
+      hamburger?.classList.remove("open");
+    });
+  });
+
+  // Language toggle (visual only)
+  const langToggle = document.getElementById("lang-toggle");
+  const langLabel = document.getElementById("lang-label");
+  let isSpanish = false;
+  langToggle?.addEventListener("click", () => {
+    isSpanish = !isSpanish;
+    if (langLabel) langLabel.textContent = isSpanish ? "ES/EN" : "EN/ES";
+    langToggle.style.transform = "scale(1.1)";
+    setTimeout(() => {
+      langToggle.style.transform = "";
+    }, 200);
+  });
+</script>

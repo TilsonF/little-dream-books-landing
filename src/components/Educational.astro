@@ -1,0 +1,399 @@
+---
+const educationalPoints = [
+  {
+    id: "fine-motor",
+    icon: "✏️",
+    title: "Fine Motor Skills",
+    desc: "Activity books help develop crucial hand-eye coordination.",
+  },
+  {
+    id: "increased-focus",
+    icon: "🎯",
+    title: "Increased Focus",
+    desc: "Engaging storylines encourage longer attention spans.",
+  },
+  {
+    id: "vocabulary",
+    icon: "📖",
+    title: "Vocabulary Building",
+    desc: "Dual-language exposure naturally expands word recognition.",
+  },
+];
+---
+
+<section class="educational-section" id="educational">
+  <div class="container edu-inner">
+    <!-- Left: Educational value -->
+    <div class="edu-card">
+      <h2 class="edu-title">Educational Value</h2>
+
+      <div class="edu-points">
+        {
+          educationalPoints.map((pt, i) => (
+            <div class="edu-point" id={pt.id}>
+              <div class="edu-point-icon">
+                <span role="img" aria-label={pt.title}>{pt.icon}</span>
+              </div>
+              <div>
+                <strong class="edu-point-title">{pt.title}</strong>
+                <p class="edu-point-desc">{pt.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="edu-progress">
+        <div class="progress-label">
+          <span class="prog-name">Reading Comprehension</span>
+          <span class="prog-pct">92%</span>
+        </div>
+        <div class="progress-bar" aria-label="Reading comprehension: 92%">
+          <div class="progress-fill" style="width: 92%; background: var(--secondary);" data-width="92%"></div>
+        </div>
+        <div class="progress-label">
+          <span class="prog-name">Language Retention</span>
+          <span class="prog-pct">88%</span>
+        </div>
+        <div class="progress-bar" aria-label="Language retention: 88%">
+          <div class="progress-fill" style="width: 88%; background: var(--sky);" data-width="88%"></div>
+        </div>
+        <div class="progress-label">
+          <span class="prog-name">Creative Thinking</span>
+          <span class="prog-pct">95%</span>
+        </div>
+        <div class="progress-bar" aria-label="Creative thinking: 95%">
+          <div class="progress-fill" style="width: 95%; background: var(--lavender-dark);" data-width="95%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Trusted section -->
+    <div class="trusted-card">
+      <div class="trusted-badge-wrap">
+        <div class="trusted-badge">
+          <span class="trusted-stars">★★★★★</span>
+          <span class="trusted-score">4.9/5</span>
+        </div>
+      </div>
+
+      <h2 class="trusted-title">Trusted by Educators & Parents</h2>
+      <p class="trusted-desc">
+        Our books are designed not just to entertain, but to support early
+        childhood development. We incorporate principles that teachers look
+        for and parents appreciate, making reading time productive and joyful.
+      </p>
+
+      <!-- Testimonials -->
+      <div class="testimonials">
+        <blockquote class="testimonial" id="testimonial-1">
+          <p class="testimonial-text">
+            "My daughter asks to read Isabella every single night. Her Spanish has improved so much!"
+          </p>
+          <footer class="testimonial-author">
+            <span class="author-avatar">👩</span>
+            <span class="author-name">María G. — Mom of a 6-year-old</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial" id="testimonial-2">
+          <p class="testimonial-text">
+            "I use these books in my classroom. The bilingual format is perfect for our diverse students."
+          </p>
+          <footer class="testimonial-author">
+            <span class="author-avatar">👨‍🏫</span>
+            <span class="author-name">Mr. Rivera — 1st Grade Teacher</span>
+          </footer>
+        </blockquote>
+      </div>
+
+      <div class="trusted-logos">
+        <span class="trust-logo">🏫 Schools</span>
+        <span class="trust-logo">📚 Libraries</span>
+        <span class="trust-logo">🏥 Clinics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .educational-section {
+    padding: var(--space-xl) 0;
+    background: var(--background);
+  }
+
+  .edu-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* Edu card */
+  .edu-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--outline-variant);
+  }
+
+  .edu-title {
+    font-family: var(--font-brand);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 24px;
+  }
+
+  .edu-points {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .edu-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: transform 0.2s ease;
+  }
+
+  .edu-point:hover {
+    transform: translateX(4px);
+  }
+
+  .edu-point-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--surface-container);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+  }
+
+  .edu-point:hover .edu-point-icon {
+    background: var(--lavender-soft);
+  }
+
+  .edu-point-title {
+    font-family: var(--font-brand);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .edu-point-desc {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+    line-height: 1.5;
+  }
+
+  /* Progress */
+  .edu-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .prog-name {
+    font-family: var(--font-brand);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--on-surface);
+  }
+
+  .prog-pct {
+    font-family: var(--font-brand);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .progress-bar {
+    height: 8px;
+    background: var(--surface-container);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 0 !important; /* starts at 0, animated via JS */
+  }
+
+  .progress-fill.animated {
+    width: var(--target-width) !important;
+  }
+
+  /* Trusted card */
+  .trusted-card {
+    background: var(--primary);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    box-shadow: var(--shadow-float);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .trusted-card::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    background: rgba(195, 192, 255, 0.1);
+    border-radius: 50%;
+  }
+
+  .trusted-badge-wrap {
+    margin-bottom: 20px;
+  }
+
+  .trusted-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    padding: 8px 18px;
+    backdrop-filter: blur(8px);
+  }
+
+  .trusted-stars {
+    color: #ffd700;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .trusted-score {
+    font-family: var(--font-brand);
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .trusted-title {
+    font-family: var(--font-brand);
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 14px;
+  }
+
+  .trusted-desc {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .testimonial {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(195, 192, 255, 0.2);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    transition: background 0.2s ease;
+  }
+
+  .testimonial:hover {
+    background: rgba(255, 255, 255, 0.13);
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .author-avatar {
+    font-size: 20px;
+  }
+
+  .author-name {
+    font-family: var(--font-brand);
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Trust logos */
+  .trusted-logos {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .trust-logo {
+    font-family: var(--font-brand);
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-full);
+    padding: 6px 14px;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .edu-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  // Animate progress bars on scroll
+  const fills = document.querySelectorAll(".progress-fill");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const targetWidth = el.dataset.width || "0%";
+          el.style.width = targetWidth;
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  fills.forEach((fill) => observer.observe(fill));
+</script>

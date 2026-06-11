@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import BooksGrid from "../components/BooksGrid.astro";
+import AboutIsabella from "../components/AboutIsabella.astro";
+import Benefits from "../components/Benefits.astro";
+import Educational from "../components/Educational.astro";
+import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Navbar />
+  <main>
+    <Hero />
+    <BooksGrid />
+    <AboutIsabella />
+    <Benefits />
+    <Educational />
+    <CTA />
+  </main>
+  <Footer />
+</Layout>
+
+<!-- Scroll reveal animation -->
+<script>
+  const revealEls = document.querySelectorAll(
+    ".book-card, .benefit-card, .edu-card, .trusted-card, .edu-point"
+  );
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            (entry.target as HTMLElement).style.opacity = "1";
+            (entry.target as HTMLElement).style.transform = "translateY(0)";
+          }, i * 60);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  revealEls.forEach((el) => {
+    (el as HTMLElement).style.opacity = "0";
+    (el as HTMLElement).style.transform = "translateY(24px)";
+    (el as HTMLElement).style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    revealObserver.observe(el);
+  });
+</script>

@@ -1,0 +1,416 @@
+---
+import booksData from "../data/books.json";
+
+const { books, authorUrl, lastUpdated } = booksData;
+
+const formatLabels = { paperback: "Pasta blanda", ebook: "eBook", hardcover: "Tapa dura" };
+const langLabels = { en: "English", es: "Español" };
+const langFlags = { en: "🇺🇸", es: "🇲🇽" };
+
+// Pre-process books into a flat, template-friendly structure
+const processedBooks = books.map((book) => {
+  const cover = book.coverUrl || "";
+
+  // Flatten editions into groups for rendering
+  const editionGroups = Object.entries(book.editions || {}).map(([lang, formats]) => ({
+    lang,
+    langLabel: langLabels[lang] || lang,
+    langFlag: langFlags[lang] || "",
+    buttons: Object.entries(formats)
+      .filter(([, data]) => data && data.asin)
+      .map(([format, data]) => ({
+        format,
+        formatLabel: formatLabels[format] || format,
+        icon: format === "ebook" ? "📱" : format === "hardcover" ? "📕" : "📗",
+        asin: data.asin,
+        price: data.price || "",
+        amazonUrl: data.amazonUrl,
+        ariaLabel: `Comprar ${formatLabels[format] || format} en ${langLabels[lang] || lang}`,
+      })),
+  }));
+
+  // Primary CTA = first English edition found
+  const enEditions = Object.values((book.editions || {}).en || {});
+  const primaryUrl = (enEditions.find((e) => e && e.asin) || { amazonUrl: authorUrl }).amazonUrl;
+
+  return { ...book, cover, editionGroups, primaryUrl };
+});
+---
+
+<section class="books-section" id="books">
+  <div class="container">
+    <!-- Header -->
+    <div class="section-header">
+      <h2 class="section-title">Nuestra Biblioteca Mágica</h2>
+      <div class="title-underline" aria-hidden="true"></div>
+      <p class="section-subtitle" style="margin-top: 16px;">
+        Historias diseñadas para despertar la curiosidad, construir
+        habilidades lingüísticas y unir familias.
+      </p>
+    </div>
+
+    {
+      processedBooks.length === 0 ? (
+        <p class="no-books">
+          Próximamente. Mientras tanto,{" "}
+          <a href={authorUrl} target="_blank" rel="noopener noreferrer">
+            visita nuestra página de Amazon
+          </a>.
+        </p>
+      ) : (
+        <div class={`books-grid books-count-${processedBooks.length}`}>
+          {processedBooks.map((book) => (
+            <article class="book-card" id={`book-${book.id}`}>
+              <!-- Cover -->
+              <div class="book-cover-wrap">
+                {book.isNew && (
+                  <span class="book-new-badge chip chip-mint">✨ Nuevo</span>
+                )}
+                {book.tag && !book.isNew && (
+                  <span class={`book-tag-badge chip ${book.tagColor}`}>{book.tag}</span>
+                )}
+
+                {book.cover ? (
+                  <img
+                    src={book.cover}
+                    alt={`Portada: ${book.title}`}
+                    class="book-cover-img"
+                    loading="lazy"
+                    width="280"
+                    height="373"
+                  />
+                ) : (
+                  <div class="book-cover-placeholder"><span>📖</span></div>
+                )}
+
+                {book.stars && (
+                  <div class="book-rating">
+                    <span class="rating-stars">★</span>
+                    <span class="rating-value">{book.stars}</span>
+                    {book.reviews && <span class="rating-count">({book.reviews})</span>}
+                  </div>
+                )}
+              </div>
+
+              <!-- Info -->
+              <div class="book-info">
+                <h3 class="book-title">{book.title}</h3>
+
+                {book.description && (
+                  <p class="book-description">
+                    {book.description.slice(0, 140)}{book.description.length > 140 ? "…" : ""}
+                  </p>
+                )}
+
+                <!-- Edition buttons grouped by language -->
+                <div class="book-editions">
+                  {book.editionGroups.map((group) => (
+                    <div class="edition-group">
+                      <span class="edition-lang">{group.langFlag} {group.langLabel}</span>
+                      <div class="edition-buttons">
+                        {group.buttons.map((btn) => (
+                          <a
+                            href={btn.amazonUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="edition-btn"
+                            id={`buy-${btn.asin}`}
+                            aria-label={btn.ariaLabel}
+                          >
+                            <span class="format-icon">{btn.icon}</span>
+                            <span class="format-label">{btn.formatLabel}</span>
+                            {btn.price && <span class="format-price">{btn.price}</span>}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <!-- Main CTA -->
+                <a
+                  href={book.primaryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="book-main-cta"
+                  id={`cta-${book.id}`}
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M15.9 15.8C11 18.5 5.9 19.8 1 18.3c-.5-.2-.8.3-.4.6 4.5 3 9.5 3.8 14.1 2.1.6-.3.4-1.3-.8-.1zM17.2 14.2c-.3-.4-2.1-.2-3 .1-.2.1-.3-.2-.1-.3 1.4-1 3.8-.7 4.1-.4.3.4-.1 2.7-1.4 3.8-.2.2-.4.1-.3-.1.3-.8.9-2.8.7-3.1z" />
+                  </svg>
+                  Ver en Amazon
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )
+    }
+
+    <!-- Last updated note -->
+    {
+      lastUpdated && (
+        <p class="last-updated">
+          Datos actualizados:{" "}
+          {new Date(lastUpdated).toLocaleDateString("es-MX", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+        </p>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .books-section {
+    padding: var(--space-xl) 0;
+    background: var(--surface-container-low);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .title-underline {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--sky));
+    border-radius: var(--radius-full);
+    margin: 12px auto 0;
+  }
+
+  .no-books {
+    text-align: center;
+    color: var(--on-surface-variant);
+    font-family: var(--font-brand);
+  }
+
+  /* Grid — adapts based on number of books */
+  .books-grid {
+    display: grid;
+    gap: 28px;
+  }
+
+  .books-count-1 { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
+  .books-count-2 { grid-template-columns: repeat(2, 1fr); }
+  .books-count-3 { grid-template-columns: repeat(3, 1fr); }
+  .books-count-4 { grid-template-columns: repeat(4, 1fr); }
+
+  /* Card */
+  .book-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      box-shadow 0.3s ease;
+  }
+
+  .book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-float);
+  }
+
+  /* Cover */
+  .book-cover-wrap {
+    position: relative;
+    background: linear-gradient(160deg, #f0ecff 0%, #e8f5ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 280px;
+  }
+
+  .book-cover-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 32px rgba(46, 42, 91, 0.25);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    object-fit: cover;
+  }
+
+  .book-card:hover .book-cover-img {
+    transform: scale(1.04) rotate(-1deg);
+  }
+
+  .book-cover-placeholder {
+    width: 160px;
+    height: 220px;
+    background: var(--lavender-soft);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+  }
+
+  .book-new-badge,
+  .book-tag-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    font-size: 11px;
+  }
+
+  .book-rating {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: var(--radius-full);
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-brand);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(8px);
+  }
+
+  .rating-stars {
+    color: #f5a623;
+    font-size: 14px;
+  }
+
+  /* Info */
+  .book-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .book-title {
+    font-family: var(--font-brand);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.35;
+  }
+
+  .book-description {
+    font-size: 13px;
+    color: var(--on-surface-variant);
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  /* Editions */
+  .book-editions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .edition-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .edition-lang {
+    font-family: var(--font-brand);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--on-surface-variant);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .edition-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .edition-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--surface-container);
+    color: var(--on-surface);
+    font-family: var(--font-brand);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s;
+    border: 1px solid var(--outline-variant);
+  }
+
+  .edition-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.06);
+  }
+
+  .format-icon { font-size: 13px; }
+
+  .format-price {
+    font-size: 11px;
+    color: var(--secondary);
+    font-weight: 700;
+  }
+
+  .edition-btn:hover .format-price {
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* Main CTA */
+  .book-main-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background: var(--primary);
+    color: var(--on-primary);
+    font-family: var(--font-brand);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s;
+    margin-top: auto;
+  }
+
+  .book-main-cta:hover {
+    transform: scale(1.05);
+    background: var(--primary-container);
+  }
+
+  /* Last updated */
+  .last-updated {
+    text-align: center;
+    margin-top: 32px;
+    font-family: var(--font-brand);
+    font-size: 12px;
+    color: var(--outline);
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .books-count-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .books-count-2,
+    .books-count-3,
+    .books-count-4 { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+  }
+</style>
