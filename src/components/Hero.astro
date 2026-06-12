@@ -1,4 +1,7 @@
 ---
+import booksData from "../data/books.json";
+
+const isabellaCover = booksData.books[0]?.coverUrl || booksData.books[0]?._raw?.["B0H2H7NFJQ"]?.coverUrl || "";
 ---
 
 <section class="hero" id="hero">
@@ -18,41 +21,41 @@
     <!-- Left: Text -->
     <div class="hero-text">
       <span class="hero-eyebrow chip chip-lavender">
-        ✨ Inspiring Young Minds
+        ✨ Inspirando Mentes Jóvenes
       </span>
 
       <h1 class="hero-title">
-        Magical Books for<br />
-        <span class="title-gradient">Curious Little<br />Dreamers</span>
+        Libros Mágicos para<br />
+        <span class="title-gradient">Pequeños<br />Soñadores</span>
       </h1>
 
       <p class="hero-desc">
-        Whimsical tales in English and Spanish designed to nurture
-        imagination, build language skills, and create cherished family
-        moments.
+        Cuentos mágicos en inglés y español diseñados para nutrir la
+        imaginación, desarrollar habilidades lingüísticas y crear hermosos
+        momentos en familia.
       </p>
 
       <div class="hero-ctas">
         <a href="#books" class="btn-primary" id="explore-btn">
-          Explore Collection
+          Explorar Colección
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#about" class="btn-secondary" id="learn-more-btn">Discover Isabella</a>
+        <a href="#about" class="btn-secondary" id="learn-more-btn">Descubre a Isabella</a>
       </div>
 
       <!-- Trust badges -->
       <div class="trust-badges">
         <div class="trust-item">
           <span class="trust-icon">⭐</span>
-          <span class="trust-text">500+ Reviews</span>
+          <span class="trust-text">+500 Reseñas</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon">🌍</span>
-          <span class="trust-text">Bilingual</span>
+          <span class="trust-text">Bilingüe</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon">🏆</span>
-          <span class="trust-text">Award Winning</span>
+          <span class="trust-text">Galardonados</span>
         </div>
       </div>
     </div>
@@ -61,44 +64,48 @@
     <div class="hero-visual">
       <!-- Floating badges -->
       <div class="float-badge badge-top" id="coloring-badge">
-        <span>🎨</span> Coloring Fun
+        <span>🎨</span> Diversión para Colorear
       </div>
       <div class="float-badge badge-bottom" id="stories-badge">
-        <span>📚</span> Bilingual Stories
+        <span>📚</span> Historias Bilingües
       </div>
       <div class="float-badge badge-activity" id="activity-badge">
-        <span>✏️</span> Creative Activities
+        <span>✏️</span> Actividades Creativas
       </div>
 
       <!-- Book cover card -->
       <div class="book-card" id="hero-book-card">
         <div class="book-cover">
-          <div class="book-illustration">
-            <!-- Illustrated scene -->
-            <div class="scene-sky"></div>
-            <div class="scene-stars">
-              <span>✦</span><span>✧</span><span>✦</span><span>✧</span>
-              <span>✦</span><span>✧</span><span>✦</span><span>✧</span>
+          {isabellaCover ? (
+             <img src={isabellaCover} alt="Isabella and the Garden of Stars" class="real-book-cover" />
+          ) : (
+            <div class="book-illustration">
+              <!-- Illustrated scene fallback -->
+              <div class="scene-sky"></div>
+              <div class="scene-stars">
+                <span>✦</span><span>✧</span><span>✦</span><span>✧</span>
+                <span>✦</span><span>✧</span><span>✦</span><span>✧</span>
+              </div>
+              <div class="scene-ground"></div>
+              <div class="scene-flowers">
+                <span>🌸</span><span>🌺</span><span>🌸</span>
+              </div>
+              <div class="scene-fireflies">
+                <span class="ff ff1">✨</span>
+                <span class="ff ff2">✨</span>
+                <span class="ff ff3">✨</span>
+                <span class="ff ff4">✨</span>
+              </div>
+              <div class="scene-girl" aria-label="Isabella illustration">👧</div>
+              <div class="book-title-overlay">
+                <span class="book-title-line1">Isabella</span>
+                <span class="book-title-line2">y el Jardín</span>
+                <span class="book-title-line3">de las Estrellas</span>
+              </div>
             </div>
-            <div class="scene-ground"></div>
-            <div class="scene-flowers">
-              <span>🌸</span><span>🌺</span><span>🌸</span>
-            </div>
-            <div class="scene-fireflies">
-              <span class="ff ff1">✨</span>
-              <span class="ff ff2">✨</span>
-              <span class="ff ff3">✨</span>
-              <span class="ff ff4">✨</span>
-            </div>
-            <div class="scene-girl" aria-label="Isabella illustration">👧</div>
-            <div class="book-title-overlay">
-              <span class="book-title-line1">Isabella</span>
-              <span class="book-title-line2">y el Jardín</span>
-              <span class="book-title-line3">de las Estrellas</span>
-            </div>
-          </div>
+          )}
           <div class="book-badge">
-            <span class="chip chip-mint">NEW</span>
+            <span class="chip chip-mint">NUEVO</span>
           </div>
         </div>
       </div>
@@ -110,22 +117,22 @@
     <div class="container stats-inner">
       <div class="stat-item">
         <span class="stat-icon">👶</span>
-        <span class="stat-label">Ages 4-8</span>
+        <span class="stat-label">Edades 4-8</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
         <span class="stat-icon">🌐</span>
-        <span class="stat-label">Bilingual</span>
+        <span class="stat-label">Bilingüe</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
         <span class="stat-icon">📵</span>
-        <span class="stat-label">Screen-Free</span>
+        <span class="stat-label">Sin Pantallas</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item">
         <span class="stat-icon">🎓</span>
-        <span class="stat-label">Educational</span>
+        <span class="stat-label">Educativos</span>
       </div>
     </div>
   </div>
@@ -367,6 +374,12 @@
     aspect-ratio: 3/4;
     background: linear-gradient(160deg, #1e1556 0%, #2e2a5b 40%, #0d1f3c 100%);
     overflow: hidden;
+  }
+
+  .real-book-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .book-illustration {
