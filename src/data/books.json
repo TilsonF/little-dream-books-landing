@@ -2,10 +2,10 @@
   "authorId": "B0H2QJHHD5",
   "authorName": "Tilson Fernandez",
   "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
-  "lastUpdated": "2026-06-14T10:51:33.461Z",
+  "lastUpdated": "2026-06-15T14:27:48.125Z",
   "fetchStats": {
-    "successCount": 4,
-    "failCount": 0,
+    "successCount": 0,
+    "failCount": 4,
     "total": 4
   },
   "books": [
