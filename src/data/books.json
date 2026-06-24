@@ -2,10 +2,10 @@
   "authorId": "B0H2QJHHD5",
   "authorName": "Tilson Fernandez",
   "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
-  "lastUpdated": "2026-06-23T11:21:52.698Z",
+  "lastUpdated": "2026-06-24T10:54:38.035Z",
   "fetchStats": {
-    "successCount": 4,
-    "failCount": 0,
+    "successCount": 1,
+    "failCount": 3,
     "total": 4
   },
   "books": [
@@ -23,7 +23,7 @@
         "en": {
           "paperback": {
             "asin": "B0H2H7NFJQ",
-            "price": "$14.99",
+            "price": "",
             "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ"
           },
           "ebook": {
@@ -51,11 +51,11 @@
           "title": "Isabella and the Garden of Stars: A Magical Bedtime Story About Overcoming Fear of the Dark",
           "coverUrl": "https://m.media-amazon.com/images/I/714hoImkkkL._SL500_.jpg",
           "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
-          "price": "$14.99",
+          "price": "",
           "stars": "5.0",
           "reviews": "1",
           "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ",
-          "fetchedAt": "2026-06-23T11:21:32.522Z"
+          "fetchedAt": "2026-06-24T10:54:21.883Z"
         },
         "B0GX2WKNWN": {
           "asin": "B0GX2WKNWN",
