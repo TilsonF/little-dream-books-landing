@@ -2,7 +2,7 @@
   "authorId": "B0H2QJHHD5",
   "authorName": "Tilson Fernandez",
   "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
-  "lastUpdated": "2026-07-17T10:01:47.484Z",
+  "lastUpdated": "2026-07-18T09:37:03.186Z",
   "fetchStats": {
     "successCount": 4,
     "failCount": 0,
@@ -40,7 +40,7 @@
           },
           "ebook": {
             "asin": "B0H3J4974D",
-            "price": "$14.99",
+            "price": "",
             "amazonUrl": "https://www.amazon.com/dp/B0H3J4974D"
           }
         }
@@ -55,7 +55,7 @@
           "stars": "5.0",
           "reviews": "2",
           "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ",
-          "fetchedAt": "2026-07-17T10:01:26.838Z"
+          "fetchedAt": "2026-07-18T09:36:43.017Z"
         },
         "B0GX2WKNWN": {
           "asin": "B0GX2WKNWN",
@@ -66,7 +66,7 @@
           "stars": "5.0",
           "reviews": "2",
           "amazonUrl": "https://www.amazon.com/dp/B0GX2WKNWN",
-          "fetchedAt": "2026-07-17T10:01:32.172Z"
+          "fetchedAt": "2026-07-18T09:36:50.555Z"
         },
         "B0H2FPQHPF": {
           "asin": "B0H2FPQHPF",
@@ -77,18 +77,18 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H2FPQHPF",
-          "fetchedAt": "2026-07-17T10:01:40.286Z"
+          "fetchedAt": "2026-07-18T09:36:57.111Z"
         },
         "B0H3J4974D": {
           "asin": "B0H3J4974D",
           "title": "Isabella y el jardín de las estrellas: Un cuento mágico para vencer el miedo a la oscuridad (Spanish Edition)",
           "coverUrl": "https://m.media-amazon.com/images/I/71II1Jmh7eL._SL500_.jpg",
           "description": "¿Y si la oscuridad no fuera algo que temer, sino el lugar más mágico al que tu hijo ha ido?Isabella no puede dormir. Cada noche, las sombras de su cuarto se sienten demasiado grandes, demasiado silenciosas, demasiado desconocidas. Pero una noche, algo extraordinario ocurre: su jardín comienza a brillar.Las flores florecen bajo la luna. Las luciérnagas danzan entre las hojas. E Isabella descubre qu",
-          "price": "$14.99",
+          "price": "",
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H3J4974D",
-          "fetchedAt": "2026-07-17T10:01:47.484Z"
+          "fetchedAt": "2026-07-18T09:37:03.186Z"
         }
       }
     }
