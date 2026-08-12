@@ -2,7 +2,7 @@
   "authorId": "B0H2QJHHD5",
   "authorName": "Tilson Fernandez",
   "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
-  "lastUpdated": "2026-08-11T09:01:40.555Z",
+  "lastUpdated": "2026-08-12T09:15:00.415Z",
   "fetchStats": {
     "successCount": 4,
     "failCount": 0,
@@ -23,7 +23,7 @@
         "en": {
           "paperback": {
             "asin": "B0H2H7NFJQ",
-            "price": "$14.99",
+            "price": "$7.49",
             "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ"
           },
           "ebook": {
@@ -51,11 +51,11 @@
           "title": "Isabella and the Garden of Stars: A Magical Bedtime Story About Overcoming Fear of the Dark",
           "coverUrl": "https://m.media-amazon.com/images/I/714hoImkkkL._SL500_.jpg",
           "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
-          "price": "$14.99",
+          "price": "$7.49",
           "stars": "5.0",
           "reviews": "2",
           "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ",
-          "fetchedAt": "2026-08-11T09:01:23.130Z"
+          "fetchedAt": "2026-08-12T09:14:43.091Z"
         },
         "B0GX2WKNWN": {
           "asin": "B0GX2WKNWN",
@@ -66,7 +66,7 @@
           "stars": "5.0",
           "reviews": "2",
           "amazonUrl": "https://www.amazon.com/dp/B0GX2WKNWN",
-          "fetchedAt": "2026-08-11T09:01:28.354Z"
+          "fetchedAt": "2026-08-12T09:14:47.956Z"
         },
         "B0H2FPQHPF": {
           "asin": "B0H2FPQHPF",
@@ -77,7 +77,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H2FPQHPF",
-          "fetchedAt": "2026-08-11T09:01:35.042Z"
+          "fetchedAt": "2026-08-12T09:14:54.364Z"
         },
         "B0H3J4974D": {
           "asin": "B0H3J4974D",
@@ -88,7 +88,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H3J4974D",
-          "fetchedAt": "2026-08-11T09:01:40.554Z"
+          "fetchedAt": "2026-08-12T09:15:00.414Z"
         }
       }
     }
