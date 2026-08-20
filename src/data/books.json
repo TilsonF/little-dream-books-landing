@@ -2,7 +2,7 @@
   "authorId": "B0H2QJHHD5",
   "authorName": "Tilson Fernandez",
   "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
-  "lastUpdated": "2026-08-19T08:43:45.010Z",
+  "lastUpdated": "2026-08-20T08:42:00.382Z",
   "fetchStats": {
     "successCount": 4,
     "failCount": 0,
@@ -17,8 +17,8 @@
       "title": "Isabella and the Garden of Stars: A Magical Bedtime Story About Overcoming Fear of the Dark",
       "coverUrl": "https://m.media-amazon.com/images/I/714hoImkkkL._SL500_.jpg",
       "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
-      "stars": "5.0",
-      "reviews": "2",
+      "stars": "4.6",
+      "reviews": "3",
       "editions": {
         "en": {
           "paperback": {
@@ -52,10 +52,10 @@
           "coverUrl": "https://m.media-amazon.com/images/I/714hoImkkkL._SL500_.jpg",
           "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
           "price": "$7.49",
-          "stars": "5.0",
-          "reviews": "2",
+          "stars": "4.6",
+          "reviews": "3",
           "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ",
-          "fetchedAt": "2026-08-19T08:43:25.688Z"
+          "fetchedAt": "2026-08-20T08:41:37.156Z"
         },
         "B0GX2WKNWN": {
           "asin": "B0GX2WKNWN",
@@ -63,10 +63,10 @@
           "coverUrl": "https://m.media-amazon.com/images/I/71ZgeSnUiYL._SL500_.jpg",
           "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
           "price": "",
-          "stars": "5.0",
-          "reviews": "2",
+          "stars": "4.6",
+          "reviews": "3",
           "amazonUrl": "https://www.amazon.com/dp/B0GX2WKNWN",
-          "fetchedAt": "2026-08-19T08:43:32.243Z"
+          "fetchedAt": "2026-08-20T08:41:44.870Z"
         },
         "B0H2FPQHPF": {
           "asin": "B0H2FPQHPF",
@@ -77,7 +77,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H2FPQHPF",
-          "fetchedAt": "2026-08-19T08:43:38.023Z"
+          "fetchedAt": "2026-08-20T08:41:52.436Z"
         },
         "B0H3J4974D": {
           "asin": "B0H3J4974D",
@@ -88,7 +88,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H3J4974D",
-          "fetchedAt": "2026-08-19T08:43:45.009Z"
+          "fetchedAt": "2026-08-20T08:42:00.382Z"
         }
       }
     }
