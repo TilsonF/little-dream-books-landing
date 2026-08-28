@@ -2,18 +2,18 @@
   "authorId": "B0H2QJHHD5",
   "authorName": "Tilson Fernandez",
   "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
-  "lastUpdated": "2026-08-27T18:58:03.193Z",
+  "lastUpdated": "2026-08-28T18:13:44.699Z",
   "fetchStats": {
-    "successCount": 4,
+    "successCount": 12,
     "failCount": 0,
-    "total": 4
+    "total": 12
   },
   "books": [
     {
       "id": "isabella-garden-of-stars",
       "tag": "Disponible ahora",
       "tagColor": "chip-mint",
-      "isNew": true,
+      "isNew": false,
       "title": "Isabella and the Garden of Stars: A Magical Bedtime Story About Overcoming Fear of the Dark",
       "coverUrl": "https://m.media-amazon.com/images/I/714hoImkkkL._SL500_.jpg",
       "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
@@ -23,7 +23,7 @@
         "en": {
           "paperback": {
             "asin": "B0H2H7NFJQ",
-            "price": "$7.49",
+            "price": "",
             "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ"
           },
           "ebook": {
@@ -51,11 +51,11 @@
           "title": "Isabella and the Garden of Stars: A Magical Bedtime Story About Overcoming Fear of the Dark",
           "coverUrl": "https://m.media-amazon.com/images/I/714hoImkkkL._SL500_.jpg",
           "description": "What if the dark was not something to fear — but the most magical place your child has ever been?Isabella cannot sleep. Every night, the shadows in her room feel too big, too quiet, too unknown. But one evening, something extraordinary happens: her garden begins to glow.Flowers bloom under the moonlight. Fireflies dance between the leaves. And Isabella discovers that darkness is not the end of the",
-          "price": "$7.49",
+          "price": "",
           "stars": "4.6",
           "reviews": "3",
           "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ",
-          "fetchedAt": "2026-08-27T18:57:41.042Z"
+          "fetchedAt": "2026-08-28T18:12:28.474Z"
         },
         "B0GX2WKNWN": {
           "asin": "B0GX2WKNWN",
@@ -66,7 +66,7 @@
           "stars": "4.6",
           "reviews": "3",
           "amazonUrl": "https://www.amazon.com/dp/B0GX2WKNWN",
-          "fetchedAt": "2026-08-27T18:57:47.633Z"
+          "fetchedAt": "2026-08-28T18:12:37.061Z"
         },
         "B0H2FPQHPF": {
           "asin": "B0H2FPQHPF",
@@ -77,7 +77,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H2FPQHPF",
-          "fetchedAt": "2026-08-27T18:57:55.287Z"
+          "fetchedAt": "2026-08-28T18:12:43.967Z"
         },
         "B0H3J4974D": {
           "asin": "B0H3J4974D",
@@ -88,7 +88,173 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H3J4974D",
-          "fetchedAt": "2026-08-27T18:58:03.191Z"
+          "fetchedAt": "2026-08-28T18:12:52.720Z"
+        }
+      }
+    },
+    {
+      "id": "isabella-learns-to-say-no",
+      "tag": "Disponible ahora",
+      "tagColor": "chip-lavender",
+      "isNew": true,
+      "title": "Isabella Learns to Say NO: A Story About Boundaries, Respect and Self-Love",
+      "coverUrl": "https://m.media-amazon.com/images/I/81LIlgt4fiL._SL500_.jpg",
+      "description": "Does your child say \"yes\" to everything—even when they really want to say \"no\"?Isabella is sweet, kind, and always wants to please. But one day she discovers that saying \"yes\" when her heart says \"no\" leaves a little knot in her tummy. With the help of a very special butterfly, Isabella learns that setting boundaries doesn't make her any less kind… it makes her braver!A gentle, empowering story th",
+      "stars": "",
+      "reviews": "",
+      "editions": {
+        "en": {
+          "paperback": {
+            "asin": "B0H7PN4MQB",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H7PN4MQB"
+          },
+          "ebook": {
+            "asin": "B0H84Z523N",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H84Z523N"
+          }
+        },
+        "es": {
+          "paperback": {
+            "asin": "B0H7PJNX19",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H7PJNX19"
+          },
+          "ebook": {
+            "asin": "B0H85CX45Q",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H85CX45Q"
+          }
+        }
+      },
+      "_raw": {
+        "B0H84Z523N": {
+          "asin": "B0H84Z523N",
+          "title": "Isabella Learns to Say NO: A Story About Boundaries, Respect and Self-Love",
+          "coverUrl": "https://m.media-amazon.com/images/I/81LIlgt4fiL._SL500_.jpg",
+          "description": "Does your child say \"yes\" to everything—even when they really want to say \"no\"?Isabella is sweet, kind, and always wants to please. But one day she discovers that saying \"yes\" when her heart says \"no\" leaves a little knot in her tummy. With the help of a very special butterfly, Isabella learns that setting boundaries doesn't make her any less kind… it makes her braver!A gentle, empowering story th",
+          "price": "",
+          "stars": "",
+          "reviews": "",
+          "amazonUrl": "https://www.amazon.com/dp/B0H84Z523N",
+          "fetchedAt": "2026-08-28T18:12:59.912Z"
+        },
+        "B0H7PN4MQB": {
+          "asin": "B0H7PN4MQB",
+          "title": "Isabella Learns to Say NO: A Story About Boundaries, Respect and Self-Love (Spanish Edition)",
+          "coverUrl": "https://m.media-amazon.com/images/I/61XoCmtZdTL._SL500_.jpg",
+          "description": "Does your child say \"yes\" to everything—even when they really want to say \"no\"?Isabella is sweet, kind, and always wants to please. But one day she discovers that saying \"yes\" when her heart says \"no\" leaves a little knot in her tummy. With the help of a very special butterfly, Isabella learns that setting boundaries doesn't make her any less kind… it makes her braver!A gentle, empowering story th",
+          "price": "",
+          "stars": "",
+          "reviews": "",
+          "amazonUrl": "https://www.amazon.com/dp/B0H7PN4MQB",
+          "fetchedAt": "2026-08-28T18:13:06.188Z"
+        },
+        "B0H7PJNX19": {
+          "asin": "B0H7PJNX19",
+          "title": "Isabella aprende a decir NO: Un cuento sobre límites, respeto y amor propio (Spanish Edition)",
+          "coverUrl": "https://m.media-amazon.com/images/I/61eGJMYHH5L._SL500_.jpg",
+          "description": "¿Tu peque dice \"sí\" a todo… aunque por dentro quiera decir \"no\"?Isabella es dulce, amable y siempre quiere agradar. Pero un día descubre que decir \"sí\" cuando su corazoncito dice \"no\" la hace sentir pequeñita. Con la ayuda de una mariposa muy especial, Isabella aprende que poner límites no la hace menos buena… ¡la hace más valiente!Un cuento tierno y empoderador que le enseña a los niños que su vo",
+          "price": "",
+          "stars": "",
+          "reviews": "",
+          "amazonUrl": "https://www.amazon.com/dp/B0H7PJNX19",
+          "fetchedAt": "2026-08-28T18:13:10.874Z"
+        },
+        "B0H85CX45Q": {
+          "asin": "B0H85CX45Q",
+          "title": "Isabella aprende a decir NO: Un cuento sobre límites, respeto y amor propio (Spanish Edition)",
+          "coverUrl": "https://m.media-amazon.com/images/I/81BfoazHQRL._SL500_.jpg",
+          "description": "¿Tu peque dice \"sí\" a todo… aunque por dentro quiera decir \"no\"?Isabella es dulce, amable y siempre quiere agradar. Pero un día descubre que decir \"sí\" cuando su corazoncito dice \"no\" la hace sentir pequeñita. Con la ayuda de una mariposa muy especial, Isabella aprende que poner límites no la hace menos buena… ¡la hace más valiente!Un cuento tierno y empoderador que le enseña a los niños que su vo",
+          "price": "",
+          "stars": "",
+          "reviews": "",
+          "amazonUrl": "https://www.amazon.com/dp/B0H85CX45Q",
+          "fetchedAt": "2026-08-28T18:13:19.087Z"
+        }
+      }
+    },
+    {
+      "id": "isabella-thousand-colors",
+      "tag": "Para colorear",
+      "tagColor": "chip-yellow",
+      "isNew": false,
+      "title": "Isabella, the Girl of a Thousand Colors: Adventures to color, imagine and learn.",
+      "coverUrl": "https://m.media-amazon.com/images/I/61RmPTHc59L._SL500_.jpg",
+      "description": "Isabella the Girl of a Thousand Colors is a coloring and creativity book designed for children ages 3 to 8.In every adventure, Isabella discovers a new way to imagine: one day she is a mermaid, the next an astronaut, a chef, a scientist, an artist, a veterinarian, a detective, and so much more.Each page combines a simple mini-story with a creative activity or a scene ready to color. It's the perfe",
+      "stars": "",
+      "reviews": "",
+      "editions": {
+        "en": {
+          "paperback": {
+            "asin": "B0H6GCMJ4Y",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H6GCMJ4Y"
+          },
+          "hardcover": {
+            "asin": "B0H6BBDTMB",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H6BBDTMB"
+          }
+        },
+        "es": {
+          "paperback": {
+            "asin": "B0H66QVDD4",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H66QVDD4"
+          },
+          "hardcover": {
+            "asin": "B0H6B843VG",
+            "price": "",
+            "amazonUrl": "https://www.amazon.com/dp/B0H6B843VG"
+          }
+        }
+      },
+      "_raw": {
+        "B0H6BBDTMB": {
+          "asin": "B0H6BBDTMB",
+          "title": "Isabella, the Girl of a Thousand Colors: Adventures to color, imagine and learn.",
+          "coverUrl": "https://m.media-amazon.com/images/I/61RmPTHc59L._SL500_.jpg",
+          "description": "Isabella the Girl of a Thousand Colors is a coloring and creativity book designed for children ages 3 to 8.In every adventure, Isabella discovers a new way to imagine: one day she is a mermaid, the next an astronaut, a chef, a scientist, an artist, a veterinarian, a detective, and so much more.Each page combines a simple mini-story with a creative activity or a scene ready to color. It's the perfe",
+          "price": "",
+          "stars": "",
+          "reviews": "",
+          "amazonUrl": "https://www.amazon.com/dp/B0H6BBDTMB",
+          "fetchedAt": "2026-08-28T18:13:27.665Z"
+        },
+        "B0H6GCMJ4Y": {
+          "asin": "B0H6GCMJ4Y",
+          "title": "Isabella, the Girl of a Thousand Colors: Adventures to color, imagine and learn. (Spanish Edition)",
+          "coverUrl": "https://m.media-amazon.com/images/I/611KDpdOtXL._SL500_.jpg",
+          "description": "Isabella the Girl of a Thousand Colors is a coloring and creativity book designed for children ages 3 to 8.In every adventure, Isabella discovers a new way to imagine: one day she is a mermaid, the next an astronaut, a chef, a scientist, an artist, a veterinarian, a detective, and so much more.Each page combines a simple mini-story with a creative activity or a scene ready to color. It's the perfe",
+          "price": "",
+          "stars": "",
+          "reviews": "",
+          "amazonUrl": "https://www.amazon.com/dp/B0H6GCMJ4Y",
+          "fetchedAt": "2026-08-28T18:13:33.978Z"
+        },
+        "B0H66QVDD4": {
+          "asin": "B0H66QVDD4",
+          "title": "Isabella, la niña de mil colores: Aventuras para colorear, imaginar y aprender (Spanish Edition)",
+          "coverUrl": "https://m.media-amazon.com/images/I/61RTnF4pedL._SL500_.jpg",
+          "description": "Isabella, la niña de mil colores es un libro para colorear y crear, diseñado para niñas y niños de 3 a 8 años.En cada aventura, Isabella descubre una nueva forma de imaginar: un día es sirena, otro día astronauta, chef, científica, artista, veterinaria, detective y mucho más.Cada página combina una mini historia sencilla con una actividad creativa o una escena lista para colorear. Es ideal para de",
+          "price": "",
+          "stars": "5.0",
+          "reviews": "1",
+          "amazonUrl": "https://www.amazon.com/dp/B0H66QVDD4",
+          "fetchedAt": "2026-08-28T18:13:39.107Z"
+        },
+        "B0H6B843VG": {
+          "asin": "B0H6B843VG",
+          "title": "Isabella, la niña de mil colores: Aventuras para colorear, imaginar y aprender (Spanish Edition)",
+          "coverUrl": "https://m.media-amazon.com/images/I/61PqSaInihL._SL500_.jpg",
+          "description": "Isabella, la niña de mil colores es un libro para colorear y crear, diseñado para niñas y niños de 3 a 8 años.En cada aventura, Isabella descubre una nueva forma de imaginar: un día es sirena, otro día astronauta, chef, científica, artista, veterinaria, detective y mucho más.Cada página combina una mini historia sencilla con una actividad creativa o una escena lista para colorear. Es ideal para de",
+          "price": "",
+          "stars": "5.0",
+          "reviews": "1",
+          "amazonUrl": "https://www.amazon.com/dp/B0H6B843VG",
+          "fetchedAt": "2026-08-28T18:13:44.699Z"
         }
       }
     }

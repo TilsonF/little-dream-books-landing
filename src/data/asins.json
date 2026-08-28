@@ -7,7 +7,7 @@
       "id": "isabella-garden-of-stars",
       "tag": "Disponible ahora",
       "tagColor": "chip-mint",
-      "isNew": true,
+      "isNew": false,
       "primaryAsin": "B0H2H7NFJQ",
       "editions": {
         "en": {
@@ -19,6 +19,44 @@
           "paperback": "B0H2FPQHPF",
           "ebook": "B0H3J4974D",
           "hardcover": ""
+        }
+      }
+    },
+    {
+      "id": "isabella-learns-to-say-no",
+      "tag": "Disponible ahora",
+      "tagColor": "chip-lavender",
+      "isNew": true,
+      "primaryAsin": "B0H84Z523N",
+      "editions": {
+        "en": {
+          "paperback": "B0H7PN4MQB",
+          "ebook": "B0H84Z523N",
+          "hardcover": ""
+        },
+        "es": {
+          "paperback": "B0H7PJNX19",
+          "ebook": "B0H85CX45Q",
+          "hardcover": ""
+        }
+      }
+    },
+    {
+      "id": "isabella-thousand-colors",
+      "tag": "Para colorear",
+      "tagColor": "chip-yellow",
+      "isNew": false,
+      "primaryAsin": "B0H6BBDTMB",
+      "editions": {
+        "en": {
+          "paperback": "B0H6GCMJ4Y",
+          "ebook": "",
+          "hardcover": "B0H6BBDTMB"
+        },
+        "es": {
+          "paperback": "B0H66QVDD4",
+          "ebook": "",
+          "hardcover": "B0H6B843VG"
         }
       }
     }
