@@ -2,7 +2,7 @@
   "authorId": "B0H2QJHHD5",
   "authorName": "Tilson Fernandez",
   "authorUrl": "https://www.amazon.com/stores/author/B0H2QJHHD5",
-  "lastUpdated": "2026-09-30T14:45:50.147Z",
+  "lastUpdated": "2026-10-01T15:15:21.889Z",
   "fetchStats": {
     "successCount": 12,
     "failCount": 0,
@@ -55,7 +55,7 @@
           "stars": "4.7",
           "reviews": "4",
           "amazonUrl": "https://www.amazon.com/dp/B0H2H7NFJQ",
-          "fetchedAt": "2026-09-30T14:44:37.308Z"
+          "fetchedAt": "2026-10-01T15:14:03.232Z"
         },
         "B0GX2WKNWN": {
           "asin": "B0GX2WKNWN",
@@ -66,7 +66,7 @@
           "stars": "4.7",
           "reviews": "4",
           "amazonUrl": "https://www.amazon.com/dp/B0GX2WKNWN",
-          "fetchedAt": "2026-09-30T14:44:43.482Z"
+          "fetchedAt": "2026-10-01T15:14:11.259Z"
         },
         "B0H2FPQHPF": {
           "asin": "B0H2FPQHPF",
@@ -77,7 +77,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H2FPQHPF",
-          "fetchedAt": "2026-09-30T14:44:49.065Z"
+          "fetchedAt": "2026-10-01T15:14:18.141Z"
         },
         "B0H3J4974D": {
           "asin": "B0H3J4974D",
@@ -88,7 +88,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H3J4974D",
-          "fetchedAt": "2026-09-30T14:44:54.543Z"
+          "fetchedAt": "2026-10-01T15:14:23.588Z"
         }
       }
     },
@@ -138,7 +138,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H84Z523N",
-          "fetchedAt": "2026-09-30T14:45:03.041Z"
+          "fetchedAt": "2026-10-01T15:14:31.147Z"
         },
         "B0H7PN4MQB": {
           "asin": "B0H7PN4MQB",
@@ -149,7 +149,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H7PN4MQB",
-          "fetchedAt": "2026-09-30T14:45:08.431Z"
+          "fetchedAt": "2026-10-01T15:14:37.358Z"
         },
         "B0H7PJNX19": {
           "asin": "B0H7PJNX19",
@@ -160,7 +160,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H7PJNX19",
-          "fetchedAt": "2026-09-30T14:45:13.403Z"
+          "fetchedAt": "2026-10-01T15:14:45.788Z"
         },
         "B0H85CX45Q": {
           "asin": "B0H85CX45Q",
@@ -171,7 +171,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H85CX45Q",
-          "fetchedAt": "2026-09-30T14:45:21.613Z"
+          "fetchedAt": "2026-10-01T15:14:52.491Z"
         }
       }
     },
@@ -221,7 +221,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H6BBDTMB",
-          "fetchedAt": "2026-09-30T14:45:28.457Z"
+          "fetchedAt": "2026-10-01T15:15:00.441Z"
         },
         "B0H6GCMJ4Y": {
           "asin": "B0H6GCMJ4Y",
@@ -232,7 +232,7 @@
           "stars": "",
           "reviews": "",
           "amazonUrl": "https://www.amazon.com/dp/B0H6GCMJ4Y",
-          "fetchedAt": "2026-09-30T14:45:35.020Z"
+          "fetchedAt": "2026-10-01T15:15:08.987Z"
         },
         "B0H66QVDD4": {
           "asin": "B0H66QVDD4",
@@ -243,7 +243,7 @@
           "stars": "5.0",
           "reviews": "1",
           "amazonUrl": "https://www.amazon.com/dp/B0H66QVDD4",
-          "fetchedAt": "2026-09-30T14:45:42.695Z"
+          "fetchedAt": "2026-10-01T15:15:16.290Z"
         },
         "B0H6B843VG": {
           "asin": "B0H6B843VG",
@@ -254,7 +254,7 @@
           "stars": "5.0",
           "reviews": "1",
           "amazonUrl": "https://www.amazon.com/dp/B0H6B843VG",
-          "fetchedAt": "2026-09-30T14:45:50.146Z"
+          "fetchedAt": "2026-10-01T15:15:21.888Z"
         }
       }
     }
